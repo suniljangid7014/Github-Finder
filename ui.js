@@ -4,26 +4,25 @@ class UI {
   }
 
   showProfile(user) {
-    console.log(user);
     this.profile.innerHTML = `
 <div class="card card-body container">
 <div class="row">
   <div class="col-md-3">
-    <img class="img-fluid rounded mb-3" src="${user.profile.avatar_url}" alt="" style="width: 28rem;">
+    <img class="img-fluid rounded mb-3" src="${user.avatar_url}" alt="" style="width: 28rem;">
     <a href="${user.profile.html_url}" target="_blank" class="btn btn-primary btn-block">View Profile</a>
   </div>
   <div class="col-md-9 mt-3">
-    <span class="badge badge-primary">Public Repos: ${user.profile.public_repos}</span>
-    <span class="badge badge-secondary">Public Gists: ${user.profile.public_gists}</span>
-    <span class="badge badge-success">Followers: ${user.profile.followers}</span>
-    <span class="badge badge-info">Following: ${user.profile.following}</span>
+    <span class="badge badge-primary">Public Repos: ${user.public_repos}</span>
+    <span class="badge badge-secondary">Public Gists: ${user.public_gists}</span>
+    <span class="badge badge-success">Followers: ${user.followers}</span>
+    <span class="badge badge-info">Following: ${user.following}</span>
     <br><br>
     <ul class="list-group">
-      <li class="list-group-item">Name: ${user.profile.name}</li>
-      <li class="list-group-item">Bio: ${user.profile.bio}</li>
-      <li class="list-group-item">Company: ${user.profile.company}</li>
-      <li class="list-group-item">Location: ${user.profile.location}</li>
-      <li class="list-group-item">Member since: ${user.profile.created_at}</li>
+      <li class="list-group-item">Name: ${user.name}</li>
+      <li class="list-group-item">Bio: ${user.bio}</li>
+      <li class="list-group-item">Company: ${user.company}</li>
+      <li class="list-group-item">Location: ${user.location}</li>
+      <li class="list-group-item">Member since: ${user.created_at}</li>
     </ul>
 
   </div>
